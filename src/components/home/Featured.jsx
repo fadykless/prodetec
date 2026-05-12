@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const products = Array(8).fill({
     name: '5 x 2 feet standard flex roll up standee',
     price: '$108.30',
-    image: '/placeholder.jpg',
+    image: '/images/elements/85354.jpg',
 });
 
 export default function FeaturedSection() {

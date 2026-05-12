@@ -8,6 +8,7 @@ import {
     Paper,
     Typography,
     Button,
+    useTheme,
 } from "@mui/material";
 import PrintIcon from "@mui/icons-material/Print";
 import BuildIcon from "@mui/icons-material/Build";
@@ -15,6 +16,7 @@ import GroupIcon from "@mui/icons-material/Group";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 
 export default function APropos() {
+    const theme = useTheme()
     return (
         <Box sx={{ backgroundColor: "#0f0f0f", color: "#fff", minHeight: "100vh" }}>
 
@@ -26,9 +28,9 @@ export default function APropos() {
                     background: "linear-gradient(135deg, #1c1c1c, #0f0f0f)",
                 }}
             >
-                <PrintIcon sx={{ fontSize: 60, color: "#d32f2f" }} />
+                <PrintIcon sx={{ fontSize: 60, color: theme.palette.primary.main }} />
                 <Typography variant="h3" fontWeight="bold" mt={2}>
-                    À propos de PRINTEX
+                    À propos de PRODETEC
                 </Typography>
                 <Typography variant="h6" sx={{ opacity: 0.8, mt: 2 }}>
                     Votre partenaire en impression professionnelle en RDC
@@ -43,7 +45,7 @@ export default function APropos() {
                         Notre histoire
                     </Typography>
                     <Typography sx={{ opacity: 0.8, lineHeight: 1.8 }}>
-                        PRINTEX est née d’une ambition simple : offrir en République Démocratique du Congo
+                        PRODETEC est née d’une ambition simple : offrir en République Démocratique du Congo
                         des solutions d’impression modernes, rapides et de qualité internationale.
                         Nous accompagnons les entreprises, marques et particuliers dans la
                         réalisation de leurs supports de communication.
@@ -55,9 +57,9 @@ export default function APropos() {
 
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Paper sx={{ p: 3, backgroundColor: "#1a1a1a", color: "#fff", height: "100%" }}>
-                            <BuildIcon sx={{ fontSize: 40, color: "#d32f2f" }} />
+                            <BuildIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
                             <Typography variant="h6" mt={2}>
-                                Qualité
+                                Grandeur
                             </Typography>
                             <Typography sx={{ opacity: 0.7, mt: 1 }}>
                                 Des impressions nettes, précises et durables grâce à des équipements professionnels.
@@ -67,24 +69,24 @@ export default function APropos() {
 
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Paper sx={{ p: 3, backgroundColor: "#1a1a1a", color: "#fff", height: "100%" }}>
-                            <EmojiObjectsIcon sx={{ fontSize: 40, color: "#d32f2f" }} />
+                            <GroupIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
                             <Typography variant="h6" mt={2}>
-                                Innovation
+                                Excellence
                             </Typography>
                             <Typography sx={{ opacity: 0.7, mt: 1 }}>
-                                Des solutions modernes pour répondre aux besoins des marques actuelles.
+                                Un accompagnement personnalisé pour chaque client, du devis à la livraison.
                             </Typography>
                         </Paper>
                     </Grid>
 
                     <Grid size={{ xs: 12, md: 4 }}>
                         <Paper sx={{ p: 3, backgroundColor: "#1a1a1a", color: "#fff", height: "100%" }}>
-                            <GroupIcon sx={{ fontSize: 40, color: "#d32f2f" }} />
+                            <EmojiObjectsIcon sx={{ fontSize: 40, color: theme.palette.primary.main }} />
                             <Typography variant="h6" mt={2}>
-                                Proximité
+                                Innovation
                             </Typography>
                             <Typography sx={{ opacity: 0.7, mt: 1 }}>
-                                Un accompagnement personnalisé pour chaque client, du devis à la livraison.
+                                Des solutions modernes pour répondre aux besoins des marques actuelles.
                             </Typography>
                         </Paper>
                     </Grid>
@@ -122,15 +124,15 @@ export default function APropos() {
                     </Typography>
 
                     <Button
+                        component='a'
+                        href="/devis"
                         variant="contained"
                         sx={{
-                            backgroundColor: "#d32f2f",
                             px: 4,
                             py: 1.5,
                             fontWeight: "bold",
-                            "&:hover": {
-                                backgroundColor: "#b71c1c",
-                            },
+                            borderRadius: 6,
+                            textTransform: 'capitalize'
                         }}
                     >
                         Demander un devis

@@ -16,10 +16,10 @@ const OfferBanner = () => {
         <Grid item size={12}>
           <Box>
             <Typography variant="h3" sx={{ color: 'white' }}>
-              Réjoignez-nous!
+              Offres publicitaires ici.
             </Typography>
             <Typography sx={{ color: 'white', mt: 2 }}>
-              Devenez un acteur clé dans la vente de véhicules grâce à MOTUKA. Profitez d’une plateforme innovante pour connecter acheteurs et vendeurs, gagnez des commissions attractives et développez votre réseau dans le secteur automobile. Une opportunité flexible et enrichissante vous attend.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, ad? Hic at quas voluptate dignissimos unde corporis aspernatur praesentium ullam eius tempore nisi consequuntur aperiam atque inventore nam, non alias.
             </Typography>
             <Typography sx={{ my: 3 }}>
               <Button
@@ -30,9 +30,10 @@ const OfferBanner = () => {
                 sx={{
                   borderRadius: 6,
                   px: 4,
+                  border: '1px solid white'
                 }}
               >
-                Nous réjoindre
+                Souscrire
               </Button>
             </Typography>
           </Box>
