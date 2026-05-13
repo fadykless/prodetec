@@ -7,7 +7,7 @@ function HomeAbout() {
             <Grid container spacing={2}>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <Typography>
-                        <img src={'/about-home.jpg'} style={{ borderRadius: 20 }} width={500} />
+                        <img src={'/imprimante.png'} style={{ borderRadius: 20 }} width={500} />
                     </Typography>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}
@@ -18,10 +18,10 @@ function HomeAbout() {
                     }}
                 >
                     <Box>
-                        <Typography gutterBottom={2} variant='h3'>Qui sommes-nous?</Typography>
+                        <Typography sx={{ fontWeight: 'bold' }} gutterBottom={2} variant='h3'>PRODETEC</Typography>
                         <Typography>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cumque, tempore error assumenda modi beatae, distinctio officiis quia in esse odio rem porro quod voluptas! Officiis architecto ratione rem nulla?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cumque, tempore error assumenda modi beatae, distinctio officiis quia in esse odio rem porro quod voluptas! Officiis architecto ratione rem nulla?
+                            Nous sommes motivés par une mission claire d'être la plus grande industrie de l'impression par l'innovation. <br />
+                            Nous visons à être partenaire incontournable des entreprises qui cherchent à élever la présence de leur marque grâce à des solutions d'impression innovantes et durables.
                         </Typography>
                     </Box>
                 </Grid>

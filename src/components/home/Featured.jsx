@@ -3,19 +3,44 @@
 import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import { motion } from 'framer-motion';
 
-const products = Array(8).fill({
-    name: '5 x 2 feet standard flex roll up standee',
-    price: '$108.30',
-    image: '/images/elements/85354.jpg',
-});
+const products = [
+    {
+        name: 'Panneaux en mousse',
+        image: '/images/elements/1.webp'
+    },
+    {
+        name: 'Roll-up publicitaires',
+        image: '/images/elements/2.webp'
+    },
+    {
+        name: 'Impressions Fine Art Giclée',
+        image: '/images/elements/3.jpg'
+    },
+    {
+        name: 'Cartes de vœux',
+        image: '/images/elements/4.jpg'
+    },
+    {
+        name: 'Brochures & livrets',
+        image: '/images/elements/5.webp'
+    },
+    {
+        name: 'Cartes de visite',
+        image: '/images/elements/6.webp'
+    },
+    {
+        name: 'Affiches',
+        image: '/images/elements/7.webp'
+    },
+    {
+        name: 'Dépliants & flyers',
+        image: '/images/elements/8.webp'
+    },
+];
 
 export default function FeaturedSection() {
     return (
-        <Container sx={{ py: 8 }}>
-            <Typography variant="h3" gutterBottom={2}>
-                Votre solution d'impression professionnelle.
-            </Typography>
-
+        <Container >
             <Grid container sx={{ py: 5 }} spacing={4}>
                 {products.map((product, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
@@ -29,9 +54,6 @@ export default function FeaturedSection() {
                                 <CardContent>
                                     <Typography variant="body2">
                                         {product.name}
-                                    </Typography>
-                                    <Typography fontWeight={600}>
-                                        {product.price}
                                     </Typography>
                                 </CardContent>
                             </Card>

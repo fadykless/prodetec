@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import MenuIcon from "@mui/icons-material/Menu";
 import { menuList } from '../menuList';
 import NavItem from './NavItem';
+import { WhatsApp } from '@mui/icons-material';
 
 export default function Topbar({ onSidebarOpen }) {
   const theme = useTheme()
@@ -69,6 +70,9 @@ export default function Topbar({ onSidebarOpen }) {
           </Box>
           <Button
             disableElevation
+            coomponent='a'
+            href='tel: +243 824 504 779'
+            startIcon={<WhatsApp />}
             variant='outlined' sx={{ borderRadius: 6, textTransform: 'capitalize' }}>Nous contacter</Button>
         </Toolbar>
       </Container>

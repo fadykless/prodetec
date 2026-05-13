@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Button, Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Grid, alpha } from '@mui/material';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
@@ -9,12 +9,19 @@ export default function HeroSection() {
             sx={{
                 background: 'linear-gradient(90deg,#ff0f7b,#f89b29)',
                 color: '#fff',
-                py: 12,
+                py: 20,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundImage: `linear-gradient(
+                  to bottom,
+                  ${alpha('#000', 0.1)},
+                  ${alpha('#000', 0.8)}
+                ), url(${"/images/home/banner-intro.jpg"})`
             }}
         >
             <Container>
                 <Grid container spacing={2}>
-                    <Grid size={{ xs: 12, md: 6 }} sx={{
+                    <Grid size={{ xs: 12 }} sx={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center'
@@ -32,11 +39,6 @@ export default function HeroSection() {
                                 Demander un devis
                             </Button>
                         </motion.div>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography sx={{ textAlign: 'center' }}>
-                            <img src={'/imprimante.png'} alt='printing' width={500} />
-                        </Typography>
                     </Grid>
                 </Grid>
             </Container>

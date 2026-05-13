@@ -1,44 +1,71 @@
 'use client';
-import { Box, Button, Container, Grid, Typography, useTheme } from "@mui/material";
-import React from "react";
+import { Box, Container, Grid, Typography, alpha, useTheme } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 const OfferBanner = () => {
   const theme = useTheme();
+  const images = ['3.jpg', '4.jpg', '5.webp', '7.webp'];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000); // change toutes les 4 secondes
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <Container sx={{ py: 5 }}>
-      <Grid
-        sx={{ backgroundColor: theme.palette.primary.main, p: 5 }}
-        container
-        direction={"row"}
-        justifyContent={"center"}
-        alignItems={"center"}
+      <Box
+        sx={{
+          position: "relative",
+          height: 300,
+          overflow: "hidden",
+          borderRadius: 4
+        }}
       >
-        <Grid item size={12}>
-          <Box>
-            <Typography variant="h3" sx={{ color: 'white' }}>
-              Offres publicitaires ici.
+        {images.map((image, index) => (
+          <Box
+            key={index}
+            sx={{
+              position: "absolute",
+              inset: 0,
+              transition: "opacity 1s ease-in-out",
+              opacity: index === currentIndex ? 1 : 0,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundImage: `linear-gradient(
+                to bottom,
+                ${alpha('#000', 0.1)},
+                ${alpha('#000', 0.8)}
+              ), url(${"/images/elements/" + image})`
+            }}
+          />
+        ))}
+
+        {/* Contenu par-dessus */}
+        <Grid
+          container
+          sx={{
+            position: "relative",
+            height: "100%",
+            px: { md: 10, xs: 6 },
+            alignItems: "center",
+            color: "#fff"
+          }}
+        >
+          <Grid size={12}>
+            <Typography variant="h4" fontWeight={700}>
+              Découvrez nos offres d'impression
             </Typography>
-            <Typography sx={{ color: 'white', mt: 2 }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, ad? Hic at quas voluptate dignissimos unde corporis aspernatur praesentium ullam eius tempore nisi consequuntur aperiam atque inventore nam, non alias.
+            <Typography sx={{ mt: 2 }}>
+              Qualité premium – Livraison rapide – Prix compétitifs
             </Typography>
-            <Typography sx={{ my: 3 }}>
-              <Button
-                variant="contained"
-                disableElevation
-                component="a"
-                href="https://chat.whatsapp.com/Cj5699JPU2yIJ740zqZgjo"
-                sx={{
-                  borderRadius: 6,
-                  px: 4,
-                  border: '1px solid white'
-                }}
-              >
-                Souscrire
-              </Button>
-            </Typography>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Container>
   );
 };
