@@ -1,90 +1,175 @@
 'use client';
+
 import React from "react";
 import PropTypes from "prop-types";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+import {
+  Box,
+  Button,
+  Drawer,
+  Typography,
+  useTheme,
+  alpha,
+} from "@mui/material";
+
 import NavItem from "./NavItem";
 import { menuList } from "../menuList";
-import { Drawer, Typography, useTheme } from "@mui/material";
 
 const SidebarNav = ({ onClose, open, variant }) => {
   const theme = useTheme();
-  //const currentUser = auth.currentUser?.uid
+
+  const primaryGradient =
+    "linear-gradient(90deg,#ff0f7b,#f89b29,#00c6ff)";
 
   return (
     <Drawer
       anchor="left"
-      onClose={() => onClose()}
+      onClose={onClose}
       open={open}
       variant={variant}
       sx={{
         "& .MuiPaper-root": {
           width: "100%",
-          maxWidth: 280,
-          backgroundColor: "paper",
+          maxWidth: 300,
+          background:
+            "linear-gradient(135deg,#0f172a 0%, #111827 100%)",
+          color: "#fff",
+          borderRight: `1px solid ${alpha("#fff", 0.08)}`,
         },
       }}
     >
-      <Box
-        sx={{
-          height: "100%",
-          padding: 1,
-        }}
-      >
-        <Box>
+      <Box sx={{ height: "100%", py: 2 }}>
+
+        {/* Logo */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mb: 3,
+          }}
+        >
           <Box
+            component="a"
+            href="/"
+            onClick={onClose}
             sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-start",
+              display: "inline-flex",
+              p: 1,
             }}
-            width={1}
-            paddingX={2}
-            paddingY={1}
           >
-            <Typography
-              textAlign={"center"}
-              component="a"
-              sx={{ mr: 0.5 }}
-              href={"/"}
-            >
-              <img src="/logo.png" alt="logo" width={150} />
-            </Typography>
-          </Box>
-          <Box paddingX={2} paddingY={2}>
-            {menuList.map((page) =>
-              page.items ? (
-                <Box key={page.href} sx={{ ml: 1, fontSize: 15 }}>
-                  <NavItem title={page.name} items={page.items} />
-                </Box>
-              ) : (
-                <Button
-                  component="a"
-                  key={page.href}
-                  href={page.href}
-                  sx={{
-                    display: "block",
-                    textTransform: 'Capitalize',
-                    color: theme.palette.primary.main,
-                    fontSize: 15,
-                    "&:hover": {
-                      color: theme.palette.primary.main,
-                    },
-                  }}
-                >
-                  {page.name}
-                </Button>
-              )
-            )}
+            <img src="/logo-footer.png" alt="logo" width={140} />
           </Box>
         </Box>
+
+        {/* Divider accent */}
+        <Box
+          sx={{
+            height: "2px",
+            width: "70%",
+            mx: "auto",
+            mb: 3,
+            borderRadius: 10,
+            background: primaryGradient,
+          }}
+        />
+
+        {/* Menu */}
+        <Box sx={{ px: 2 }}>
+          {menuList.map((page) =>
+            page.items ? (
+              <Box key={page.href} sx={{ mb: 1 }}>
+                <NavItem title={page.name} items={page.items} />
+              </Box>
+            ) : (
+              <Button
+                key={page.href}
+                component="a"
+                href={page.href}
+                onClick={onClose}
+                disableRipple
+                sx={{
+                  width: "100%",
+                  justifyContent: "flex-start",
+                  textTransform: "none",
+                  color: "rgba(255,255,255,0.75)",
+                  fontSize: 15,
+                  py: 1.2,
+                  px: 1.5,
+                  borderRadius: 2,
+                  transition: "all .3s ease",
+
+                  "&:hover": {
+                    color: "#fff",
+                    background: alpha("#fff", 0.06),
+                    transform: "translateX(6px)",
+                  },
+
+                  position: "relative",
+
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    width: 3,
+                    height: 0,
+                    borderRadius: 10,
+                    background: primaryGradient,
+                    transition: "all .3s ease",
+                  },
+
+                  "&:hover::before": {
+                    height: "60%",
+                  },
+                }}
+              >
+                {page.name}
+              </Button>
+            )
+          )}
+        </Box>
+
+        {/* Footer branding */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 20,
+            width: "100%",
+            textAlign: "center",
+            px: 2,
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: 12,
+              color: alpha("#fff", 0.5),
+            }}
+          >
+            Impression • Branding • Design
+          </Typography>
+
+          <Box
+            sx={{
+              mt: 1,
+              height: "2px",
+              width: "50%",
+              mx: "auto",
+              borderRadius: 10,
+              background: primaryGradient,
+            }}
+          />
+        </Box>
+
       </Box>
     </Drawer>
   );
 };
 
 SidebarNav.propTypes = {
-  pages: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  variant: PropTypes.string,
 };
 
 export default SidebarNav;
