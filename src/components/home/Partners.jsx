@@ -10,6 +10,10 @@ const partners = [
     "/images/partners/4.png",
     "/images/partners/5.png",
     "/images/partners/6.png",
+    "/images/partners/7.png",
+    "/images/partners/8.png",
+    "/images/partners/9.png",
+    "/images/partners/10.png",
 ];
 
 // duplication pour boucle infinie fluide

@@ -146,7 +146,7 @@ const SidebarNav = ({ onClose, open, variant }) => {
               color: alpha("#fff", 0.5),
             }}
           >
-            Impression • Branding • Design
+            Grandeur • Excellence • Innovation
           </Typography>
 
           <Box

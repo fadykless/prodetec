@@ -123,6 +123,7 @@ export default function HeroSection() {
                                             borderRadius: 6,
                                             textTransform: 'capitalize',
                                             px: 4,
+                                            m: 1,
                                             fontWeight: 'bold'
                                         }}
                                         variant="contained"
@@ -138,6 +139,7 @@ export default function HeroSection() {
                                         sx={{
                                             borderRadius: 6,
                                             ml: 2,
+                                            m: 1,
                                             textTransform: 'capitalize',
                                             px: 4,
                                             fontWeight: 'bold',
