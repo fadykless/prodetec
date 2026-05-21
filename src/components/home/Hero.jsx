@@ -97,8 +97,18 @@ export default function HeroSection() {
                                     variant="h2"
                                     gutterBottom
                                     sx={{
-                                        fontWeight: 'bold',
-                                        maxWidth: 900
+                                        fontWeight: 800,
+                                        maxWidth: 900,
+                                        textAlign: { xs: "center", md: "left" },
+
+                                        fontSize: {
+                                            xs: "1.8rem",   // mobile
+                                            sm: "2.4rem",
+                                            md: "3.2rem",
+                                            lg: "3.8rem",
+                                        },
+
+                                        lineHeight: 1.2,
                                     }}
                                 >
                                     Votre solution d'impression professionnelle en RDC.
