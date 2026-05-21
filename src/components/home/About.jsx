@@ -3,11 +3,11 @@ import React from 'react'
 
 function HomeAbout() {
     return (
-        <Container sx={{ my: 2 }}>
+        <Container sx={{ my: 4 }}>
             <Grid container spacing={2}>
                 <Grid size={{ xs: 12, md: 6 }}>
-                    <Typography>
-                        <img src={'/imprimante.png'} style={{ borderRadius: 20 }} width={500} />
+                    <Typography sx={{ textAlign: 'center' }}>
+                        <img src={'/images/elements/grand-format.jpg'} style={{ borderRadius: 6 }} width={400} />
                     </Typography>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}

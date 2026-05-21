@@ -21,19 +21,19 @@ import { motion } from 'framer-motion';
 const contactItems = [
     {
         title: 'Adresse',
-        value: 'Kinshasa, RDC',
+        value: '44 Avenue de la Démocratie, Kinshasa - Gombe',
         icon: <LocationOnIcon fontSize="large" />,
         color: '#ff0f7b',
     },
     {
         title: 'Téléphone',
-        value: '+243 000 000 000',
+        value: '+243 824 504 779',
         icon: <PhoneIcon fontSize="large" />,
         color: '#f89b29',
     },
     {
         title: 'Adresse email',
-        value: 'contact@votreimprimerie.com',
+        value: 'contact@prodetec.com',
         icon: <EmailIcon fontSize="large" />,
         color: '#00c6ff',
     },

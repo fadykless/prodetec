@@ -43,8 +43,8 @@ const values = [
 
 const team = [
     {
-        name: 'Jean Mukendi',
-        role: 'Directeur Général',
+        name: 'Nadine Kabeya',
+        role: 'Directrice Générale',
         image: '/images/team/team-1.jpg',
     },
     {
@@ -163,7 +163,7 @@ export default function AboutPage() {
                             >
                                 <Box
                                     component="img"
-                                    src="/images/about/printing-house.jpg"
+                                    src="/images/elements/grand-format.jpg"
                                     alt="Imprimerie"
                                     sx={{
                                         width: '100%',

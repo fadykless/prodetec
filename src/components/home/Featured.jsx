@@ -5,36 +5,36 @@ import { motion } from 'framer-motion';
 
 const products = [
     {
-        name: 'Panneaux en mousse',
-        image: '/images/elements/1.webp'
+        name: 'Impression Abris bus',
+        image: '/images/elements/abris-bus.jpg'
     },
     {
-        name: 'Roll-up publicitaires',
-        image: '/images/elements/2.webp'
+        name: 'Calendrier',
+        image: '/images/elements/calendar.jpg'
     },
     {
-        name: 'Impressions Fine Art Giclée',
-        image: '/images/elements/3.jpg'
+        name: 'Branding automobile',
+        image: '/images/elements/car-revetment.jpg'
     },
     {
-        name: 'Cartes de vœux',
-        image: '/images/elements/4.jpg'
+        name: 'Impression sur t-shirts & textiles',
+        image: '/images/elements/dtf.jpg'
     },
     {
-        name: 'Brochures & livrets',
-        image: '/images/elements/5.webp'
+        name: 'Impression grand format',
+        image: '/images/elements/grand-format.jpg'
     },
     {
-        name: 'Cartes de visite',
-        image: '/images/elements/6.webp'
+        name: 'Kits entreprise',
+        image: '/images/elements/gravure.jpg'
     },
     {
-        name: 'Affiches',
-        image: '/images/elements/7.webp'
+        name: 'Stands & Roll-up',
+        image: '/images/elements/roll-up.jpg'
     },
     {
-        name: 'Dépliants & flyers',
-        image: '/images/elements/8.webp'
+        name: 'Impression tout support',
+        image: '/images/elements/tout-support.jpg'
     },
 ];
 
@@ -45,7 +45,7 @@ export default function FeaturedSection() {
                 {products.map((product, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                         <motion.div whileHover={{ y: -10 }}>
-                            <Card>
+                            <Card elevation={0}>
                                 <CardMedia
                                     component="img"
                                     height="200"

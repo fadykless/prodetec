@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 const OfferBanner = () => {
   const theme = useTheme();
-  const images = ['3.jpg', '4.jpg', '5.webp', '7.webp'];
+  const images = ['abris-bus.jpg', 'car-revetment.jpg', 'gravure.jpg', 'roll-up.jpg'];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto slide

@@ -13,9 +13,9 @@ import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 
 const images = [
-    '/images/home/banner-1.jpg',
-    '/images/home/banner-2.jpg',
-    '/images/home/banner-3.jpg',
+    '/images/bannieres/1.jpg',
+    '/images/bannieres/2.jpg',
+    '/images/bannieres/3.jpg',
 ];
 
 export default function HeroSection() {

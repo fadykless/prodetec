@@ -27,7 +27,7 @@ const products = [
         title: 'Cartes de visite',
         description:
             "Des cartes professionnelles premium pour valoriser votre image et laisser une impression durable.",
-        image: '/images/products/business-card.jpg',
+        image: '/images/elements/cartes.jpg',
         icon: <PrintIcon />,
         category: 'Entreprise',
         color: '#ff0f7b',
@@ -36,7 +36,7 @@ const products = [
         title: 'Flyers & affiches',
         description:
             "Impressions publicitaires de haute qualité pour vos campagnes marketing et événements.",
-        image: '/images/products/flyers.jpg',
+        image: '/images/elements/flyers.jpg',
         icon: <LocalOfferIcon />,
         category: 'Marketing',
         color: '#f89b29',
@@ -45,16 +45,16 @@ const products = [
         title: 'Cadres photo',
         description:
             "Impressions photo HD et cadres décoratifs élégants pour maisons, bureaux et cadeaux.",
-        image: '/images/products/photo-frame.jpg',
+        image: '/images/elements/cadre-photo.jpg',
         icon: <PhotoIcon />,
         category: 'Décoration',
         color: '#00c6ff',
     },
     {
-        title: 'Autocollants & stickers',
+        title: 'Kakemonos',
         description:
             "Stickers personnalisés résistants pour branding, packaging et vitrines commerciales.",
-        image: '/images/products/stickers.jpg',
+        image: '/images/elements/grand-format.jpg',
         icon: <StyleIcon />,
         category: 'Branding',
         color: '#7b61ff',
@@ -63,7 +63,7 @@ const products = [
         title: 'Calendriers',
         description:
             "Calendriers muraux et de bureau personnalisés pour entreprises et campagnes promotionnelles.",
-        image: '/images/products/calendar.jpg',
+        image: '/images/elements/calendar2.jpg',
         icon: <CalendarMonthIcon />,
         category: 'Corporate',
         color: '#00b894',
@@ -72,7 +72,7 @@ const products = [
         title: 'Agendas personnalisés',
         description:
             "Des agendas élégants et pratiques adaptés à votre identité visuelle et vos besoins professionnels.",
-        image: '/images/products/agendas.jpg',
+        image: '/images/elements/agenda.jpg',
         icon: <MenuBookIcon />,
         category: 'Papeterie',
         color: '#e17055',
