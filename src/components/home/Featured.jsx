@@ -36,6 +36,46 @@ const products = [
         name: 'Impression tout support',
         image: '/images/elements/tout-support.jpg'
     },
+    {
+        name: 'Gourde & bracelet',
+        image: '/images/elements/gourde.jpg'
+    },
+    {
+        name: 'Invitations',
+        image: '/images/elements/invitations.jpg'
+    },
+    {
+        name: 'Kepis & T-shirt',
+        image: '/images/elements/kepi.jpg'
+    },
+    {
+        name: 'Médailles et trophées',
+        image: '/images/elements/trophy.jpg'
+    },
+    {
+        name: 'Porte-clé & Porte-monnaie',
+        image: '/images/elements/money.jpg'
+    },
+    {
+        name: 'Gilet & Choisuble',
+        image: '/images/elements/gilet.jpg'
+    },
+    {
+        name: 'Flyers & Dépliant',
+        image: '/images/elements/depliant.jpg'
+    },
+    {
+        name: 'Maillot personnalisé',
+        image: '/images/elements/maillot.jpg'
+    },
+    {
+        name: 'Plaque',
+        image: '/images/elements/plaque.jpg'
+    },
+    {
+        name: 'Stylo & Flash',
+        image: '/images/elements/pen.jpg'
+    },
 ];
 
 export default function FeaturedSection() {
