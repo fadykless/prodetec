@@ -141,7 +141,7 @@ export default function FeaturedSection() {
                                 />
                                 <CardContent>
                                     <Typography variant="body2">
-                                        {product.name}
+                                        {product.name || product.title}
                                     </Typography>
                                 </CardContent>
                             </Card>
