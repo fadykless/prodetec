@@ -76,6 +76,54 @@ const products = [
         name: 'Stylo & Flash',
         image: '/images/elements/pen.jpg'
     },
+    {
+        title: 'Cartes de visite',
+        description:
+            "Des cartes professionnelles premium pour valoriser votre image et laisser une impression durable.",
+        image: '/images/elements/cartes.jpg',
+        category: 'Entreprise',
+        color: '#ff0f7b',
+    },
+    {
+        title: 'Flyers & affiches',
+        description:
+            "Impressions publicitaires de haute qualité pour vos campagnes marketing et événements.",
+        image: '/images/elements/flyers.jpg',
+        category: 'Marketing',
+        color: '#f89b29',
+    },
+    {
+        title: 'Cadres photo',
+        description:
+            "Impressions photo HD et cadres décoratifs élégants pour maisons, bureaux et cadeaux.",
+        image: '/images/elements/cadre-photo.jpg',
+        category: 'Décoration',
+        color: '#00c6ff',
+    },
+    {
+        title: 'Kakemonos',
+        description:
+            "Stickers personnalisés résistants pour branding, packaging et vitrines commerciales.",
+        image: '/images/elements/grand-format.jpg',
+        category: 'Branding',
+        color: '#7b61ff',
+    },
+    {
+        title: 'Calendriers',
+        description:
+            "Calendriers muraux et de bureau personnalisés pour entreprises et campagnes promotionnelles.",
+        image: '/images/elements/calendar2.jpg',
+        category: 'Corporate',
+        color: '#00b894',
+    },
+    {
+        title: 'Agendas personnalisés',
+        description:
+            "Des agendas élégants et pratiques adaptés à votre identité visuelle et vos besoins professionnels.",
+        image: '/images/elements/agenda.jpg',
+        category: 'Papeterie',
+        color: '#e17055',
+    },
 ];
 
 export default function FeaturedSection() {
