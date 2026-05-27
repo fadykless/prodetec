@@ -20,7 +20,7 @@ import { motion } from 'framer-motion';
 const stats = [
     {
         title: "Années d’expérience",
-        value: 8,
+        value: 13,
         suffix: "+",
         icon: <WorkspacePremiumIcon fontSize="large" />,
         color: "#ff0f7b",
@@ -41,7 +41,7 @@ const stats = [
     },
     {
         title: "Temps moyen de livraison",
-        value: 48,
+        value: 24,
         suffix: "h",
         icon: <BoltIcon fontSize="large" />,
         color: "#7b61ff",

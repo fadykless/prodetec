@@ -95,19 +95,21 @@ export const menuList = [
         href: '/'
     },
     {
-        name: "Nos produits",
-        href: '/produits'
+        name: "A propos",
+        href: '/a-propos'
     },
+
     {
         name: "Nos services",
         href: '/services'
     },
     {
+        name: "Nos produits",
+        href: '/produits'
+    },
+    {
         name: "Contact",
         href: '/contact'
     },
-    {
-        name: "A propos",
-        href: '/a-propos'
-    }
+
 ];

@@ -9,16 +9,42 @@ import {
     alpha
 } from '@mui/material';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Slider from 'react-slick';
+import { useEffect, useState } from 'react';
 
-const images = [
-    '/images/bannieres/1.jpg',
-    '/images/bannieres/2.jpg',
-    '/images/bannieres/3.jpg',
+const slides = [
+    {
+        image: '/images/bannieres/1.jpg',
+        title: "Votre solution d'impression professionnelle en RDC.",
+        subtitle:
+            "Des impressions de haute qualité pour vos marques, entreprises et événements.",
+    },
+
+    {
+        image: '/images/bannieres/2.jpg',
+        title: "Pas de barrière pour imprimer sur tout support",
+        subtitle:
+            "Flyers, affiches, bâches et branding pour booster votre visibilité.",
+    },
+
+    {
+        image: '/images/bannieres/3.jpg',
+        title: "Broderie professionelle & Sérigraphie",
+        subtitle:
+            "Nous accompagnons les entreprises avec des solutions printing innovantes.",
+    },
+    {
+        image: '/images/bannieres/4.jpg',
+        title: "Impression numérique & digitale",
+        subtitle:
+            "Nous accompagnons les entreprises avec des solutions printing innovantes.",
+    },
 ];
 
 export default function HeroSection() {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const settings = {
         dots: false,
@@ -31,6 +57,10 @@ export default function HeroSection() {
         fade: true,
         arrows: false,
         pauseOnHover: false,
+
+        beforeChange: (_, next) => {
+            setCurrentSlide(next);
+        },
     };
 
     return (
@@ -45,7 +75,7 @@ export default function HeroSection() {
                 }}
             >
                 <Slider {...settings}>
-                    {images.map((image, index) => (
+                    {slides.map((slide, index) => (
                         <Box
                             key={index}
                             sx={{
@@ -55,10 +85,10 @@ export default function HeroSection() {
                                 backgroundImage: `
                   linear-gradient(
                     to bottom,
-                    ${alpha('#000', 0.3)},
-                    ${alpha('#000', 0.7)}
+                    ${alpha('#000', 0.45)},
+                    ${alpha('#000', 0.75)}
                   ),
-                  url(${image})
+                  url(${slide.image})
                 `,
                             }}
                         />
@@ -88,73 +118,106 @@ export default function HeroSection() {
                                 textAlign: 'center'
                             }}
                         >
-                            <motion.div
-                                initial={{ opacity: 0, y: 40 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
-                            >
-                                <Typography
-                                    variant="h2"
-                                    gutterBottom
-                                    sx={{
-                                        fontWeight: 800,
-                                        maxWidth: 900,
-                                        textAlign: { xs: "center", md: "left" },
 
-                                        fontSize: {
-                                            xs: "1.8rem",   // mobile
-                                            sm: "2.4rem",
-                                            md: "3.2rem",
-                                            lg: "3.8rem",
-                                        },
+                            <AnimatePresence mode="wait">
 
-                                        lineHeight: 1.2,
-                                    }}
+                                <motion.div
+                                    key={currentSlide}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -30 }}
+                                    transition={{ duration: 0.7 }}
                                 >
-                                    Votre solution d'impression professionnelle en RDC.
-                                </Typography>
 
-                                <Box mt={4}>
-                                    <Button
-                                        disableElevation
-                                        component='a'
-                                        href='/devis'
+                                    <Typography
+                                        variant="h2"
+                                        gutterBottom
                                         sx={{
-                                            borderRadius: 6,
-                                            textTransform: 'capitalize',
-                                            px: 4,
-                                            m: 1,
-                                            fontWeight: 'bold'
+                                            fontWeight: 800,
+                                            maxWidth: 900,
+                                            textAlign: "center",
+
+                                            fontSize: {
+                                                xs: "2rem",
+                                                sm: "2.5rem",
+                                                md: "3.5rem",
+                                                lg: "4.2rem",
+                                            },
+
+                                            lineHeight: 1.15,
                                         }}
-                                        variant="contained"
-                                        color="secondary"
                                     >
-                                        Demander un devis
-                                    </Button>
-
-                                    <Button
-                                        disableElevation
-                                        component='a'
-                                        href='/contact'
+                                        {slides[currentSlide].title}
+                                    </Typography>
+                                    {/* 
+                                    <Typography
                                         sx={{
-                                            borderRadius: 6,
-                                            ml: 2,
-                                            m: 1,
-                                            textTransform: 'capitalize',
-                                            px: 4,
-                                            fontWeight: 'bold',
-                                            borderColor: '#fff',
-                                            color: '#fff',
-                                            '&:hover': {
-                                                borderColor: '#fff',
+                                            maxWidth: 700,
+                                            mx: 'auto',
+                                            opacity: 0.85,
+                                            mt: 2,
+
+                                            fontSize: {
+                                                xs: '1rem',
+                                                md: '1.2rem'
                                             }
                                         }}
-                                        variant="outlined"
                                     >
-                                        Nous contacter
-                                    </Button>
-                                </Box>
-                            </motion.div>
+                                        {slides[currentSlide].subtitle}
+                                    </Typography> */}
+
+                                    <Box mt={5}>
+
+                                        <Button
+                                            disableElevation
+                                            component='a'
+                                            href='/devis'
+                                            sx={{
+                                                borderRadius: 6,
+                                                textTransform: 'capitalize',
+                                                px: 4,
+                                                py: 1.4,
+                                                m: 1,
+                                                fontWeight: 'bold',
+                                                fontSize: 16,
+                                            }}
+                                            variant="contained"
+                                            color="secondary"
+                                        >
+                                            Demander un devis
+                                        </Button>
+
+                                        <Button
+                                            disableElevation
+                                            component='a'
+                                            href='/contact'
+                                            sx={{
+                                                borderRadius: 6,
+                                                ml: 2,
+                                                m: 1,
+                                                textTransform: 'capitalize',
+                                                px: 4,
+                                                py: 1.4,
+                                                fontWeight: 'bold',
+                                                borderColor: '#fff',
+                                                color: '#fff',
+
+                                                '&:hover': {
+                                                    borderColor: '#fff',
+                                                    backgroundColor: alpha('#fff', 0.08),
+                                                }
+                                            }}
+                                            variant="outlined"
+                                        >
+                                            Nous contacter
+                                        </Button>
+
+                                    </Box>
+
+                                </motion.div>
+
+                            </AnimatePresence>
+
                         </Grid>
                     </Grid>
                 </Container>

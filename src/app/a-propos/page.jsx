@@ -19,23 +19,26 @@ import PrintingStatsSection from '@/components/home/Stats';
 
 const values = [
     {
-        title: 'Notre histoire',
+        title: 'Vision',
+        subtitle: "Être un acteur influent dans le monde de l'imprimerie en RDC et en Afrique",
         description:
-            "Depuis plusieurs années, notre imprimerie accompagne entreprises, marques et particuliers dans leurs besoins d’impression et de communication visuelle. Grâce à notre expertise et à des équipements modernes, nous avons su bâtir une réputation basée sur la qualité et la confiance.",
+            "Nous visons à être le partenaire incontournable des entreprises qui cherchent à élever la présence de leur marque grâce à de solutions d'impression innovantes et durables.",
         icon: <HistoryEduIcon fontSize="large" />,
         color: '#ff0f7b',
     },
     {
-        title: 'Notre mission',
+        title: 'Mission',
+        subtitle: "Devenir un leader dans l'industrie",
         description:
-            "Offrir des solutions d’impression professionnelles, rapides et créatives pour aider nos clients à valoriser leur image et leurs projets avec des supports de haute qualité.",
+            "Nous sommes motivés par une mission claire d'être la plus grande industrie de l'impression par l'innovation ",
         icon: <RocketLaunchIcon fontSize="large" />,
         color: '#f89b29',
     },
     {
-        title: 'Nos valeurs',
+        title: 'Valeurs',
+        subtitle: "La grandeur, l'excellence et l'innovation",
         description:
-            "Qualité, innovation, rapidité et satisfaction client sont au cœur de notre engagement. Chaque projet est traité avec passion et attention aux détails.",
+            "Chez New Prodetec, notre ambition de réaliser des projets ambitieux tout en mettant l'exigence de la qualité sous compromis et la modernisation constante des imprimés adaptés aux exigences du marché.",
         icon: <FavoriteIcon fontSize="large" />,
         color: '#00c6ff',
     },
@@ -127,23 +130,15 @@ export default function AboutPage() {
                                     mb: 4,
                                 }}
                             >
-                                Nous sommes spécialisés dans les solutions
-                                d’impression modernes pour les entreprises,
-                                institutions et particuliers. Notre objectif
-                                est d’apporter des supports visuels puissants
-                                qui valorisent chaque marque et chaque idée.
+                                Prodetec est le fruit d'une combinaison unique de passion et vision enfin d'influencer le secteur d'imprimerie avec un but spécifique: offrir à ses client la qualité et la rapidité des services personnalisés.
                             </Typography>
-
                             <Typography
                                 sx={{
                                     color: alpha('#fff', 0.72),
                                     lineHeight: 1.9,
                                 }}
                             >
-                                Grâce à une équipe passionnée et des
-                                technologies de pointe, nous réalisons des
-                                impressions de qualité avec des délais
-                                rapides et un accompagnement personnalisé.
+                                Chaque pas nous relevons le défis de nous améliorer à devenir une référence d'impression industrielle en RDC, des client particuliers aux grandes entreprise, nous travaillons avec vous, pour vous.
                             </Typography>
                         </motion.div>
                     </Grid>

@@ -11,69 +11,101 @@ import {
 } from '@mui/material';
 
 import CheckroomIcon from '@mui/icons-material/Checkroom';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import PhotoIcon from '@mui/icons-material/Photo';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import StyleIcon from '@mui/icons-material/Style';
-
 import { motion } from 'framer-motion';
 import PrintingStatsSection from '@/components/home/Stats';
 import PartnersSection from '@/components/home/Partners';
 
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import PrintIcon from "@mui/icons-material/Print";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
+import ViewSidebarIcon from "@mui/icons-material/ViewSidebar";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
+
 const services = [
     {
-        title: "Impression textile",
+        title: "Infographie",
         description:
-            "T-shirts, polos, hoodies et vêtements personnalisés pour entreprises, événements et marques.",
-        icon: <CheckroomIcon fontSize="large" />,
+            "Création de visuels professionnels, logos, affiches, flyers et identités graphiques pour valoriser votre image de marque.",
+        icon: <DesignServicesIcon fontSize="large" />,
         color: "#ff0f7b",
     },
+
     {
-        title: "Supports publicitaires",
+        title: "Impression numérique & offset",
         description:
-            "Flyers, affiches, brochures et supports marketing pour booster votre visibilité.",
-        icon: <LocalOfferIcon fontSize="large" />,
+            "Impression haute qualité de flyers, brochures, affiches, dépliants et supports marketing pour tous vos besoins professionnels.",
+        icon: <PrintIcon fontSize="large" />,
         color: "#f89b29",
     },
+
     {
         title: "Impression photo & déco",
         description:
-            "Cadres photo, posters et impressions haute définition pour décoration intérieure et cadeaux.",
-        icon: <PhotoIcon fontSize="large" />,
+            "Impression photo HD sur différents supports pour décoration intérieure, événements, cadres et cadeaux personnalisés.",
+        icon: <PhotoCameraIcon fontSize="large" />,
         color: "#00c6ff",
     },
+
     {
-        title: "Papeterie professionnelle",
+        title: "Impression grand format",
         description:
-            "Enveloppes, cartes de visite et documents personnalisés pour une image de marque cohérente.",
-        icon: <MailIcon fontSize="large" />,
+            "Conception et impression de bâches, roll-up, panneaux publicitaires et supports grand format pour maximiser votre visibilité.",
+        icon: <ViewSidebarIcon fontSize="large" />,
         color: "#7b61ff",
     },
+
     {
         title: "Agendas & calendriers",
         description:
-            "Agendas et calendriers personnalisés pour entreprises et campagnes promotionnelles.",
-        icon: <MenuBookIcon fontSize="large" />,
+            "Création d’agendas et calendriers personnalisés pour entreprises, campagnes promotionnelles et cadeaux corporate.",
+        icon: <CalendarMonthIcon fontSize="large" />,
         color: "#00b894",
     },
+
     {
-        title: "Calendriers & branding",
+        title: "Sérigraphie & Broderie",
         description:
-            "Solutions de branding imprimé pour renforcer la présence de votre marque toute l’année.",
-        icon: <CalendarMonthIcon fontSize="large" />,
+            "Personnalisation textile par sérigraphie et broderie sur t-shirts, polos, casquettes, uniformes et vêtements professionnels.",
+        icon: <CheckroomIcon fontSize="large" />,
         color: "#e17055",
     },
+
     {
-        title: "Stickers & autocollants",
+        title: "Support publicitaire",
         description:
-            "Stickers résistants pour packaging, vitrines, véhicules et communication visuelle.",
-        icon: <StyleIcon fontSize="large" />,
+            "Production de supports publicitaires impactants : kakemonos, PLV, enseignes, stickers et outils de communication visuelle.",
+        icon: <CampaignIcon fontSize="large" />,
         color: "#6c5ce7",
     },
-];
 
+    {
+        title: "Papeterie",
+        description:
+            "Impression de cartes de visite, enveloppes, blocs-notes, facturiers et documents administratifs personnalisés.",
+        icon: <BusinessCenterIcon fontSize="large" />,
+        color: "#0984e3",
+    },
+
+    {
+        title: "Confection d'objets publicitaires & décoratifs résine epoxy",
+        description:
+            "Fabrication d’objets personnalisés en résine epoxy pour cadeaux d’entreprise, décoration et branding événementiel.",
+        icon: <AutoAwesomeIcon fontSize="large" />,
+        color: "#fdcb6e",
+    },
+
+    {
+        title: "Branding véhicule",
+        description:
+            "Habillage et marquage publicitaire de véhicules pour renforcer la visibilité de votre entreprise en mobilité.",
+        icon: <DirectionsCarFilledIcon fontSize="large" />,
+        color: "#d63031",
+    },
+];
 export default function ServicesPage() {
     return (
         <Box
