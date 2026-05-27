@@ -5,6 +5,7 @@ import OfferBanner from "@/components/home/OfferBanner";
 import HomeAbout from "@/components/home/About";
 import PartnersSection from "@/components/home/Partners";
 import PrintingStatsSection from "@/components/home/Stats";
+import WhyChooseUs from "@/components/home/WhyChose";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeAbout />
       <OfferBanner />
       <FeaturedSection />
+      <WhyChooseUs />
       <PrintingStatsSection />
       <PartnersSection />
     </div>

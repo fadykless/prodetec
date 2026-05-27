@@ -72,6 +72,10 @@ export default function HeroSection() {
                         sx={{
                             position: 'relative',
                             width: '100%',
+                            minHeight: {
+                                xs: '85vh',
+                                md: '100vh',
+                            },
                         }}
                     >
 
@@ -82,7 +86,12 @@ export default function HeroSection() {
                             alt={slide.title}
                             sx={{
                                 width: '100%',
-                                height: 'auto',
+                                height: {
+                                    xs: '85vh',
+                                    md: '100vh',
+                                },
+
+                                objectFit: 'cover',
                                 display: 'block',
                             }}
                         />
@@ -94,12 +103,12 @@ export default function HeroSection() {
                                 inset: 0,
 
                                 background: `
-                                    linear-gradient(
-                                        to bottom,
-                                        ${alpha('#000', 0.35)},
-                                        ${alpha('#000', 0.7)}
-                                    )
-                                `,
+            linear-gradient(
+                to bottom,
+                ${alpha('#000', 0.45)},
+                ${alpha('#000', 0.75)}
+            )
+        `,
                             }}
                         />
 
@@ -113,6 +122,11 @@ export default function HeroSection() {
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
+
+                                pt: {
+                                    xs: 10,
+                                    md: 0,
+                                },
 
                                 px: {
                                     xs: 2,
@@ -136,7 +150,7 @@ export default function HeroSection() {
                                         fontWeight: 800,
 
                                         fontSize: {
-                                            xs: '1.8rem',
+                                            xs: '2rem',
                                             sm: '2.5rem',
                                             md: '3.5rem',
                                             lg: '4.2rem',
@@ -148,21 +162,15 @@ export default function HeroSection() {
                                     {slide.title}
                                 </Typography>
 
-                                <Typography
-                                    sx={{
-                                        mt: 2,
-                                        opacity: 0.9,
 
-                                        fontSize: {
-                                            xs: '0.95rem',
-                                            md: '1.2rem',
-                                        },
+                                <Box
+                                    mt={4}
+                                    sx={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        flexWrap: 'wrap',
                                     }}
                                 >
-                                    {slide.subtitle}
-                                </Typography>
-
-                                <Box mt={4}>
 
                                     <Button
                                         disableElevation
@@ -173,8 +181,10 @@ export default function HeroSection() {
                                         sx={{
                                             borderRadius: 6,
                                             textTransform: 'capitalize',
+
                                             px: 4,
                                             py: 1.3,
+
                                             fontWeight: 'bold',
                                             m: 1,
                                         }}
@@ -190,8 +200,10 @@ export default function HeroSection() {
                                         sx={{
                                             borderRadius: 6,
                                             textTransform: 'capitalize',
+
                                             px: 4,
                                             py: 1.3,
+
                                             fontWeight: 'bold',
                                             borderColor: '#fff',
                                             color: '#fff',

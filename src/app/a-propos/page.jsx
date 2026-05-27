@@ -16,6 +16,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { motion } from 'framer-motion';
 import PrintingStatsSection from '@/components/home/Stats';
+import PartnersSection from '@/components/home/Partners';
 
 const values = [
     {
@@ -408,6 +409,8 @@ export default function AboutPage() {
                     ))}
                 </Grid>
             </Container>
+
+            <PartnersSection />
         </Box>
     );
 }

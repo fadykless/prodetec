@@ -20,8 +20,8 @@ function HomeAbout() {
                     <Box>
                         <Typography sx={{ fontWeight: 'bold' }} gutterBottom={2} variant='h3'>PRODETEC</Typography>
                         <Typography>
-                            Nous sommes motivés par une mission claire d'être la plus grande industrie de l'impression par l'innovation. <br />
-                            Nous visons à être partenaire incontournable des entreprises qui cherchent à élever la présence de leur marque grâce à des solutions d'impression innovantes et durables.
+                            Bienvenue chez New Prodetec <br />
+                            Votre imprimeur de choix en impression graphisme, supports publicitaires, objets décoratifs en résine epoxy et papeterie.
                         </Typography>
                     </Box>
                 </Grid>
