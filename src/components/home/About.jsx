@@ -7,7 +7,7 @@ function HomeAbout() {
             <Grid container spacing={2}>
                 <Grid size={{ xs: 12, md: 6 }}>
                     <Typography sx={{ textAlign: 'center' }}>
-                        <img src={'/images/elements/grand-format.jpg'} style={{ borderRadius: 6 }} width={400} />
+                        <img src={'/images/elements/home-about.jpg'} style={{ borderRadius: 6 }} width={400} />
                     </Typography>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }}

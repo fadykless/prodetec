@@ -272,6 +272,20 @@ export default function AboutPage() {
                                                 0.72
                                             ),
                                             lineHeight: 1.9,
+                                            fontWeight: 800
+                                        }}
+                                    >
+                                        {item.subtitle}
+                                    </Typography>
+
+                                    <Typography
+                                        sx={{
+                                            color: alpha(
+                                                '#fff',
+                                                0.72
+                                            ),
+                                            lineHeight: 1.9,
+                                            fontWeight: 200
                                         }}
                                     >
                                         {item.description}
