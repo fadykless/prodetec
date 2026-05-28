@@ -299,9 +299,8 @@ export default function AboutPage() {
             </Container>
 
             <PrintingStatsSection />
-
             {/* Team */}
-            <Container sx={{ pb: 12, position: 'relative', zIndex: 2 }}>
+            {/* <Container sx={{ pb: 12, position: 'relative', zIndex: 2 }}>
                 <Box textAlign="center" mb={7}>
                     <Typography
                         variant="h3"
@@ -408,8 +407,7 @@ export default function AboutPage() {
                         </Grid>
                     ))}
                 </Grid>
-            </Container>
-
+            </Container> */}
             <PartnersSection />
         </Box>
     );

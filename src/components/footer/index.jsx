@@ -16,22 +16,12 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import { services } from "@/data";
 
 const Footer = () => {
-    const theme = useTheme();
 
     const primaryGradient =
-        "linear-gradient(90deg,#ff0f7b,#f89b29,#00c6ff)";
-
-    const services = [
-        "Impression numérique",
-        "Impression offset",
-        "Cartes de visite",
-        "Flyers & brochures",
-        "Bâches & roll-up",
-        "Personnalisation textile",
-        "Tampons & cachets",
-    ];
+        "linear-gradient(90deg, #00c6ff, #00509d, #00b4d8)";
 
     const socials = [
         { icon: <FaFacebookF />, link: "#" },
@@ -118,7 +108,7 @@ const Footer = () => {
 
                         {services.map((service) => (
                             <Button
-                                key={service}
+                                key={service.title}
                                 component="a"
                                 href="#"
                                 disableRipple
@@ -138,7 +128,7 @@ const Footer = () => {
                                     },
                                 }}
                             >
-                                • {service}
+                                • {service.title}
                             </Button>
                         ))}
                     </Grid>
@@ -210,7 +200,7 @@ const Footer = () => {
                                 sx={{ mr: 1, color: "#00c6ff" }}
                             />
                             <Typography sx={{ opacity: 0.75 }}>
-                                contact@prodetec.com
+                                contact@newprodetec.com
                             </Typography>
                         </Box>
                     </Grid>
