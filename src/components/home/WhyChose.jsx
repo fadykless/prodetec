@@ -21,7 +21,7 @@ const reasons = [
     {
         title: "Rapidité",
         description:
-            "Grâce à une équipe qualifiée delai de livraison respectée et nous compromis de la qualité.",
+            "Grâce à notre équipe qualifiée des délais de livraison respectés et un engagement sans compromis sur la qualité. Nous garantissons un service fiable et professionnel.",
         icon: <SpeedIcon sx={{ fontSize: 40, color: "#00c6ff" }} />,
     },
 ];
